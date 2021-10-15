@@ -1,0 +1,57 @@
+{
+  "test1": {
+    "input": "aa",
+    "pattern": "*",
+    "output": true
+  },
+  "test2": {
+    "input": "cb",
+    "pattern": "?a",
+    "output": false
+  },
+  "test3": {
+    "input": "adceb",
+    "pattern": "*a*b",
+    "output": true
+  },
+  "test4": {
+    "input": "acdcb",
+    "pattern": "a*c?b",
+    "output": false
+  },
+  "test5": {
+    "input": "jeancarlos",
+    "pattern": "*ea*ar?s",
+    "output": false
+  },
+  "test6": {
+    "input": "",
+    "pattern": "*****",
+    "output": true
+  },
+  "test7": {
+    "input": "aaaabaaaabbbbaabbbaabbaababbabbaaaababaaabbbbbbaabbbabababbaaabaabaaaaaabbaabbbbaababbababaabbbaababbbba",
+    "pattern": "*****b*aba***babaa*bbaba***a*aaba*b*aa**a*b**ba***a*a*",
+    "output": true
+  },
+  "test8": {
+    "input": "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb",
+    "pattern": "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb",
+    "output": false
+  },
+  "test9": {
+    "input": "aa",
+    "pattern": "a",
+    "output": false
+  },
+  "test10": {
+    "input": "aaab",
+    "pattern": "b**",
+    "output": false
+  },
+  "test11": {
+    "input": "aaba",
+    "pattern": "*b**?",
+    "output": true
+  }
+}
