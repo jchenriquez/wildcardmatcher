@@ -1,11 +1,10 @@
 package wildcardmatching
 
 import (
-	"fmt"
 	"strings"
 )
 
-func areSame (s, p string) bool {
+func areSame(s, p string) bool {
 	for i := 0; i < len(p); i++ {
 		if p[i] == '?' {
 			continue
@@ -17,7 +16,7 @@ func areSame (s, p string) bool {
 	return true
 }
 
-func backtrackIt (s string, p []string, sIndex, pIndex int, seen map[string]bool, firstHadStart, lastHadStar bool) bool {
+func backtrackIt(s string, p []string, sIndex, pIndex int, seen map[string]bool, firstHadStart, lastHadStar bool) bool {
 
 	if pIndex == len(p) {
 		return sIndex >= len(s) || lastHadStar
@@ -35,8 +34,6 @@ func backtrackIt (s string, p []string, sIndex, pIndex int, seen map[string]bool
 
 	pWord := p[pIndex]
 
-
-	fmt.Printf("pWord %v\n", pWord)
 	if sIndex+len(pWord) <= len(s) && pIndex == 0 && !firstHadStart {
 		return areSame(s[sIndex:sIndex+len(pWord)], pWord) && backtrackIt(s, p, sIndex+len(pWord), pIndex+1, seen, firstHadStart, lastHadStar)
 	}
@@ -69,7 +66,7 @@ func isMatch(s string, p string) bool {
 		return true
 	}
 
-	arr :=  make([]string, 0, len(patternArr))
+	arr := make([]string, 0, len(patternArr))
 
 	for _, str := range patternArr {
 		if len(str) > 0 {
